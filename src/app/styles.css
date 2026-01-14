@@ -309,6 +309,15 @@
   font-weight: 500;
 }
 
+.restaurantGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+  gap: 100px 50px; /* vertical horizontal */
+  /* ou séparé : */
+  /* row-gap: 100px; */
+  /* column-gap: 50px; */
+}
+
 @media (min-width: 768px) {
   .contentWrapper {
     padding: 0 2rem;
