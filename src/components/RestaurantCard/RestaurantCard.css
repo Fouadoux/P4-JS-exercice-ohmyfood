@@ -19,9 +19,9 @@
 }
 
 .card-content {
-  padding-left: 30px; /* ✅ Bon */
-  padding-top: 10px; /* Ajoute un peu d'espace en haut aussi */
-  padding-bottom: 10px; /* Et en bas pour respirer */
+  padding-left: 30px; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
 }
 
 .card-title {
@@ -29,7 +29,7 @@
   font-weight: 700;
   font-size: 18px;
   color: #000000;
-  margin: 0; /* Enlève les marges par défaut */
+  margin: 0; 
 }
 
 .card-location {
@@ -37,7 +37,7 @@
   font-weight: 300;
   font-size: 17px;
   color: #000000;
-  margin: 5px 0 0 0; /* Petit espace avec le titre */
+  margin: 5px 0 0 0; 
 }
 
 .badge-nouveau {
@@ -51,4 +51,30 @@
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.heart-button {
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+  width: 22px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.heart-icon {
+  width: 22px;
+  height: 21px;
+  color: transparent; 
+  stroke: #101010; 
+  stroke-width: 30px; 
+  transition: all 0.3s ease;
+}
+
+.heart-icon.liked {
+  color: #9356DC; 
+  stroke: none; 
 }

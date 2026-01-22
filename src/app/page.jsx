@@ -14,6 +14,7 @@ const restaurants = datas.restaurants.map((data) =>
     name={data.name}
     location={data.location}
     isNew={data.isNew}
+    slug={data.slug}
   />
 );
 

@@ -145,12 +145,15 @@
 .heartIcon {
   width: 24px;
   height: 24px;
-  color: #353535;
-  transition: color 0.2s, fill 0.2s;
+  color: transparent; /* Transparent par défaut = vide */
+  stroke: #353535; /* Bordure grise */
+  stroke-width: 30px;
+  transition: all 0.3s ease;
 }
 
-.liked .heartIcon {
-  color: transparent;
+.heartIcon.liked {
+  color: #9356DC; /* Plein violet quand liked */
+  stroke: none; /* Pas de bordure */
 }
 
 /* Menu Item Component */
@@ -318,6 +321,7 @@
   /* column-gap: 50px; */
 }
 
+
 @media (min-width: 768px) {
   .contentWrapper {
     padding: 0 2rem;
@@ -332,4 +336,7 @@
     flex: 1;
     margin: 0 1rem;
   }
+
+  
 } 
+
