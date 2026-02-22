@@ -7,11 +7,15 @@ import "./RestaurantCard.css"
 import Link from "next/link"
 
 export default function RestaurantCard({ image, name, location, isNew, slug }) {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(() => {
+    return localStorage.getItem(`liked-${slug}`) === 'true';
+  });
 
   const handleLike = (e) => {
     e.preventDefault();
-    setIsLiked(!isLiked);
+    const newValue = !isLiked;
+    setIsLiked(newValue);
+    localStorage.setItem(`liked-${slug}`, newValue);
   };
 
   return (
@@ -24,12 +28,12 @@ export default function RestaurantCard({ image, name, location, isNew, slug }) {
             <h3 className="card-title">{name}</h3>
             <p className="card-location">{location}</p>
           </article>
-          <button 
-            className="heart-button" 
+          <button
+            className="heart-button"
             onClick={handleLike}
           >
-            <FontAwesomeIcon 
-              icon={faHeart} 
+            <FontAwesomeIcon
+              icon={faHeart}
               className={isLiked ? 'heart-icon liked' : 'heart-icon'}
             />
           </button>
